@@ -147,7 +147,7 @@ function mod:CheckLoot()
 	 if link then
 	    local _, _, _, quality = GetLootSlotInfo(slot)
 	    local bind = mod:GetBindOn(link)
-	    if bind ~= "pickup"  and quality <= db.autoLootThreshold and quality >= GetLootThreshold() then
+	    if quality <= db.autoLootThreshold and quality >= GetLootThreshold() then
 	       local recipient
 	       if mod:IsDisenchantable(link) then
 		  recipient = mod:GetDisenchantLootCandidateID()
